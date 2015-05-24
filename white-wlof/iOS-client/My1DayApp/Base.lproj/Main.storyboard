@@ -21,24 +21,21 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rB6-1N-vrf">
                                             <rect key="frame" x="5" y="5" width="60" height="60"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メッセージ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPy-Rd-KYT">
-                                            <rect key="frame" x="78" y="13" width="234" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FT-w1-NrA">
-                                            <rect key="frame" x="78" y="40" width="242" height="21"/>
+                                            <rect key="frame" x="78" y="8" width="242" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xlQ-zO-mTO">
+                                            <rect key="frame" x="98" y="30" width="160" height="35"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="created_atLabel" destination="0FT-w1-NrA" id="W2d-dk-RGs"/>
                                     <outlet property="iconImageView" destination="rB6-1N-vrf" id="qKn-zx-yfW"/>
-                                    <outlet property="messageLabel" destination="RPy-Rd-KYT" id="6X3-KT-Lfn"/>
+                                    <outlet property="messageimage" destination="xlQ-zO-mTO" id="7yQ-eg-fef"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,7 +75,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-Dc-uxP">
-                                        <rect key="frame" x="74" y="67" width="246" height="128"/>
+                                        <rect key="frame" x="74" y="68" width="246" height="29"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -91,6 +88,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ON6-EM-3zg">
+                                        <rect key="frame" x="74" y="102" width="240" height="90"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -132,6 +132,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="messageTextView" destination="Lhg-Dc-uxP" id="Y5X-Cg-E1p"/>
+                        <outlet property="myImagePicker" destination="ON6-EM-3zg" id="iMj-fw-xvT"/>
+                        <outlet property="myImageView" destination="ON6-EM-3zg" id="twx-Fr-Na3"/>
                         <outlet property="textfild" destination="Od2-m5-O7o" id="f7p-t5-JVX"/>
                     </connections>
                 </viewController>

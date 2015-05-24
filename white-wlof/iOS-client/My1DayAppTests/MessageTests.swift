@@ -17,6 +17,6 @@ class MessageTests: XCTestCase {
         XCTAssertNil(Message(dictionary: ["body": body]))
 
         let message: Message = Message(dictionary: ["body": body, "icon": iconBase64EncodedString])!
-        XCTAssertEqual(message.body, body)
+        XCTAssertEqual(message.messageImage, body)
     }
 }
