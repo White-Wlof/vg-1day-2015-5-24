@@ -22,8 +22,21 @@ $app->post('/messages', function (Request $request) use ($app) {
 
     $username = isset($data['username']) ? $data['username'] : '';
     $body = isset($data['body']) ? $data['body'] : '';
-
+    switch($i=rand(0,2)){
+         case 0:
+            $uranai = "kichi";
+            break;
+         case 1:
+            $uranai = "kyou";
+            break;
+         case 2:
+            $uranai = "daikichi";
+            break;
+         default:
+            break;
+    }
     $createdMessage = $app->createMessage($username, $body, base64_encode(file_get_contents($app['icon_image_path'])));
+    $createdMessage = $app->createMessage("Bot", $body, base64_encode(file_get_contents($app['icon_image_path'])), $uranai);
 
     return $app->json($createdMessage);
 });
